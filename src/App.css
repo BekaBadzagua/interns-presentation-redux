@@ -1,0 +1,80 @@
+header{
+    background-color: aquamarine;
+    padding: 30px;
+}
+header span{
+    font-size: 30px;
+    font-family: cursive;
+}
+.content{
+    display: flex;
+    border-top: 2px solid black;
+}
+.content > div{
+    padding: 20px;
+}
+.list{
+    border-right: 2px solid black;
+    min-height: calc(100vh - 104px);
+    background-color: #fffcd7;
+    width: 300px;
+    box-sizing: border-box;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: silver;
+}
+.card{
+    width: 400px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 2px solid grey;
+    margin: 30px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    position: relative;
+}
+.card h3{
+    font-size: 30px;
+    margin-top: 10px;
+}
+.buttons{
+    position: absolute;
+    bottom: 0;
+}
+.buttons button{
+    margin:10px;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border:1px solid silver;
+    background-color: rgb(251, 157, 41);
+}
+button:hover{
+    cursor: pointer;
+    background-color: orangered;
+    transition: 0.2s;
+}
+.edit{
+    background-color: #fffcd7;
+}
+.edit:hover{
+    background-color: #faf0b6;
+}
+.delete{
+    background-color: rgb(253, 232, 227);
+}
+.delete:hover{
+    background-color: rgb(255, 184, 166);
+}
+.close{
+    background-color: aquamarine;
+}
+.close:hover{
+    background-color: rgb(204, 248, 233);
+}

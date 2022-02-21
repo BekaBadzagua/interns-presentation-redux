@@ -1,10 +1,16 @@
+import Layout from './layout/Layout';
+import ContactList from './components/contactList';
+import CardList from './components/cardsList';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Heil Hitler!</h1>
-    </div>
+    <Layout>
+      <div className='content'>
+        <ContactList />
+        <CardList />
+      </div>
+    </Layout>
   );
 }
 
