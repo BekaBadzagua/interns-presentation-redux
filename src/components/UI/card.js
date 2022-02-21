@@ -1,5 +1,3 @@
-import Button from './button';
-
 const Card = (props) => {
   return (
     <div className='card'>

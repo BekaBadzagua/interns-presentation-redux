@@ -1,4 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
+import generateId from '../utils/IdGenerator';
 
 const initialState = {
   list: [
@@ -42,6 +43,9 @@ const InitializeContacts = (state) => {
 };
 
 const addContact = (state, action) => {
+  action.payload.id = generateId(state.list);
+  action.payload.onBoard = false;
+
   const contacts = [...state.list, action.payload];
   return {
     ...state,

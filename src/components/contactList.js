@@ -8,7 +8,7 @@ function ContactList(props) {
 
   useEffect(() => {
     props.initContacts();
-  });
+  }, []);
 
   const contacts = props.contacts.map((contact) => {
     return <li key={contact.id}>{contact.name}</li>;
