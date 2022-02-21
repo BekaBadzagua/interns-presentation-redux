@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import AddContact from './modals/addContact';
+import AddContact from './modals/AddContact';
 import { connect } from 'react-redux';
 import * as actions from '../store/actions/contactsAction';
 
@@ -8,7 +8,7 @@ function ContactList(props) {
 
   useEffect(() => {
     props.initContacts();
-  }, []);
+  });
 
   const contacts = props.contacts.map((contact) => {
     return (

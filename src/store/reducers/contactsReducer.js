@@ -11,21 +11,21 @@ const initialState = {
     },
     {
       id: 2,
-      name: 'ცხრაკუდა სკუნსი',
-      phone: '599 99 99 90',
+      name: 'გრძელი ცხვარი',
+      phone: '599 99 99 91',
       onBoard: false,
     },
     {
       id: 3,
-      name: 'გენიოსა ბატი',
+      name: 'ინტელიგენტი ბატი',
       phone: '599 99 99 96',
       onBoard: false,
     },
     {
       id: 4,
-      name: 'გრძელი ცხვარი',
-      phone: '599 99 99 91',
-      onBoard: true,
+      name: 'სამკუდა სკუნსი',
+      phone: '599 99 99 90',
+      onBoard: false,
     },
     {
       id: 5,

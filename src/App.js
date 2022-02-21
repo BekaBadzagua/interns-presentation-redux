@@ -1,6 +1,6 @@
 import Layout from './layout/Layout';
-import ContactList from './components/contactList';
-import CardList from './components/cardsList';
+import ContactList from './components/ContactList';
+import CardList from './components/CardsList';
 import './App.css';
 
 function App() {

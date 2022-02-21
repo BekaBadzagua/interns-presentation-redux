@@ -1,4 +1,4 @@
-import Card from './UI/card';
+import Card from './Card';
 import { connect } from 'react-redux';
 
 function CardsList(props) {

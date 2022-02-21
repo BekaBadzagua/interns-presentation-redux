@@ -3,12 +3,10 @@ import React from 'react';
 const Layout = (props) => {
   return (
     <React.Fragment>
-      <div>
-        <header>
-          <span>Fantastic Beasts & how to call them</span>
-        </header>
-        {props.children}
-      </div>
+      <header>
+        <span>Fantastic Beasts & how to call them</span>
+      </header>
+      {props.children}
     </React.Fragment>
   );
 };

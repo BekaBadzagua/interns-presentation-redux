@@ -64,6 +64,12 @@ button:hover{
 .edit{
     background-color: #fffcd7;
 }
+.call{
+    background-color: #65f86d;
+}
+.call:hover{
+    background-color: #afffb3;
+}
 .edit:hover{
     background-color: #faf0b6;
 }

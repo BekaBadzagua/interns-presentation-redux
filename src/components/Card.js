@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import * as actions from '../../store/actions/contactsAction';
+import * as actions from '../store/actions/contactsAction';
 
 function Card(props) {
   return (
@@ -7,7 +7,12 @@ function Card(props) {
       <h3>{props.contact.name}</h3>
       <span className='phone'>phone: {props.contact.phone}</span>
       <div className='buttons'>
-        <button className='edit'>Edit</button>
+        <button
+          className='call'
+          onClick={() => alert('Calling to - ' + props.contact.name)}
+        >
+          Call
+        </button>
         <button
           onClick={() => props.deleteContact(props.contact.id)}
           className='delete'
