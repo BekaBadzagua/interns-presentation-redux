@@ -1,8 +1,11 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import AddContact from './modals/addContact';
 import { connect } from 'react-redux';
 import * as actions from '../store/actions/contactsAction';
 
 function ContactList(props) {
+  const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     props.initContacts();
   });
@@ -14,9 +17,12 @@ function ContactList(props) {
   return (
     <div className='list'>
       <div>
-        <button className='btn-add'>Add Contact</button>
+        <button onClick={() => setShowModal(true)} className='btn-add'>
+          Add Contact
+        </button>
       </div>
       <ul>{contacts}</ul>
+      <AddContact show={showModal} setShowModal={setShowModal} />
     </div>
   );
 }
