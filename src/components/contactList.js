@@ -11,7 +11,11 @@ function ContactList(props) {
   }, []);
 
   const contacts = props.contacts.map((contact) => {
-    return <li key={contact.id}>{contact.name}</li>;
+    return (
+      <li onClick={() => props.addContactOnBoard(contact.id)} key={contact.id}>
+        {contact.name}
+      </li>
+    );
   });
 
   return (
@@ -35,6 +39,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     initContacts: () => dispatch(actions.initContacts()),
+    addContactOnBoard: (id) => dispatch(actions.addContactOnBoard(id)),
   };
 };
 

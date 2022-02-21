@@ -4,9 +4,7 @@ import { connect } from 'react-redux';
 function CardsList(props) {
   let cards = props.contacts
     .filter((contact) => contact.onBoard)
-    .map((contact) => (
-      <Card key={contact.name} name={contact.name} phone={contact.phone} />
-    ));
+    .map((contact) => <Card key={contact.id} contact={contact} />);
 
   cards = cards.length ? cards : <p>select contact</p>;
 
