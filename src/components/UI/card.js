@@ -8,7 +8,12 @@ function Card(props) {
       <span className='phone'>phone: {props.contact.phone}</span>
       <div className='buttons'>
         <button className='edit'>Edit</button>
-        <button className='delete'>Delete</button>
+        <button
+          onClick={() => props.deleteContact(props.contact.id)}
+          className='delete'
+        >
+          Delete
+        </button>
         <button
           onClick={() => props.removeContactFromBoard(props.contact.id)}
           className='close'
@@ -22,6 +27,7 @@ function Card(props) {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    deleteContact: (id) => dispatch(actions.deleteContact(id)),
     removeContactFromBoard: (id) =>
       dispatch(actions.removeContactFromBoard(id)),
   };
