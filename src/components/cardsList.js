@@ -1,13 +1,22 @@
 import Card from './UI/card';
+import { connect } from 'react-redux';
 
-function CardsList() {
-  return (
-    <div className='cards'>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-    </div>
+function CardsList(props) {
+  const cards = props.contacts ? (
+    props.contacts.map((contact) => (
+      <Card name={contact.name} phone={contact.phone} />
+    ))
+  ) : (
+    <p>select contact</p>
   );
+
+  return <div className='cards'>{cards}</div>;
 }
 
-export default CardsList;
+const mapStateToProps = (state) => {
+  return {
+    contacts: state.contacts.list,
+  };
+};
+
+export default connect(mapStateToProps)(CardsList);

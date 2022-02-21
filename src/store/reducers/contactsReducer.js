@@ -6,21 +6,31 @@ const initialState = {
       id: 1,
       name: 'მელოტი კუ',
       phone: '599 99 99 99',
+      onBoard: false,
     },
     {
       id: 2,
       name: 'ცხრაკუდა სკუნსი',
       phone: '599 99 99 90',
+      onBoard: false,
     },
     {
       id: 3,
       name: 'ნინძა ბატი',
       phone: '599 99 99 96',
+      onBoard: false,
     },
     {
       id: 4,
       name: 'გრძელი ცხვარი',
       phone: '599 99 99 91',
+      onBoard: false,
+    },
+    {
+      id: 5,
+      name: 'ეჭვიანი მაჩვზღარბა',
+      phone: '599 99 99 91',
+      onBoard: false,
     },
   ],
 };
