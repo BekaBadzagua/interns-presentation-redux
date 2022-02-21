@@ -24,7 +24,7 @@ const initialState = {
       id: 4,
       name: 'გრძელი ცხვარი',
       phone: '599 99 99 91',
-      onBoard: false,
+      onBoard: true,
     },
     {
       id: 5,
