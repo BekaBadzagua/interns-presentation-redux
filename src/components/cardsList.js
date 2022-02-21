@@ -2,13 +2,13 @@ import Card from './UI/card';
 import { connect } from 'react-redux';
 
 function CardsList(props) {
-  const cards = props.contacts ? (
-    props.contacts.map((contact) => (
-      <Card name={contact.name} phone={contact.phone} />
-    ))
-  ) : (
-    <p>select contact</p>
-  );
+  let cards = props.contacts
+    .filter((contact) => contact.onBoard)
+    .map((contact) => (
+      <Card key={contact.name} name={contact.name} phone={contact.phone} />
+    ));
+
+  cards = cards.length ? cards : <p>select contact</p>;
 
   return <div className='cards'>{cards}</div>;
 }

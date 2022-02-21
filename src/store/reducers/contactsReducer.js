@@ -16,7 +16,7 @@ const initialState = {
     },
     {
       id: 3,
-      name: 'ნინძა ბატი',
+      name: 'გენიოსი ბატი',
       phone: '599 99 99 96',
       onBoard: false,
     },

@@ -24,6 +24,7 @@ header span{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
     box-sizing: border-box;
     background-color: silver;
 }
