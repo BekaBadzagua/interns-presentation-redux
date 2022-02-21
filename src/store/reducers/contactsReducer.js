@@ -17,7 +17,7 @@ const initialState = {
     },
     {
       id: 3,
-      name: 'გენიოსი ბატი',
+      name: 'გენიოსა ბატი',
       phone: '599 99 99 96',
       onBoard: false,
     },
@@ -36,6 +36,7 @@ const initialState = {
   ],
 };
 
+// Contacts
 const InitializeContacts = (state) => {
   return {
     ...state,
@@ -73,6 +74,29 @@ const deleteContact = (state, action) => {
   };
 };
 
+// Board
+export const addContactOnBoard = (state, action) => {
+  const contacts = [...state.list];
+  const index = contacts.findIndex((contact) => contact.id === action.payload);
+  contacts[index].onBoard = true;
+
+  return {
+    ...state,
+    list: [...contacts],
+  };
+};
+
+export const removeContactFromBoard = (state, action) => {
+  const contacts = [...state.list];
+  const index = contacts.findIndex((contact) => contact.id === action.payload);
+  contacts[index].onBoard = false;
+
+  return {
+    ...state,
+    list: [...contacts],
+  };
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.INIT_CONTACTS:
@@ -83,8 +107,15 @@ const reducer = (state = initialState, action) => {
       return editContact(state, action);
     case actionTypes.DELETE_CONTACT:
       return deleteContact(state, action);
+
+    case actionTypes.ADD_CONTACT_ON_BOARD:
+      return addContactOnBoard(state, action);
+    case actionTypes.REMOVE_CONTACT_FROM_BOARD:
+      return removeContactFromBoard(state, action);
+
     default:
       return state;
   }
 };
+
 export default reducer;
